@@ -12,12 +12,14 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 body {
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  /* BODY now uses Libre Caslon Text */
+  font-family: "Libre Caslon Text", serif;
   background: var(--bg);
   color: var(--fg);
-  line-height: 1.6;
+  line-height: 1.65;           /* more breathing room for serif text */
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  font-size: 17px;             /* slight bump for readability */
 }
 
 a { color: var(--fg); text-decoration: none; }
@@ -35,7 +37,7 @@ a:hover { text-decoration: underline; }
   min-height: 64px;
 }
 .menu { list-style: none; display: flex; gap: 24px; margin: 0; padding: 0; }
-.menu a { color: var(--muted); font-family: 'Cormorant Garamond', serif; letter-spacing: 0.02em; }
+.menu a { color: var(--muted); }
 .menu a:hover { color: var(--fg); }
 .nav-toggle { display: none; background: transparent; color: var(--fg); border: 1px solid var(--line); padding: 8px 10px; border-radius: 8px; }
 
@@ -49,7 +51,7 @@ a:hover { text-decoration: underline; }
 }
 .hero-inner { position: relative; padding: 90px 20px 80px; }
 
-/* Two-line serif lockup (refined) */
+/* Two-line serif lockup (uses Display for extra elegance) */
 .hero-lockup {
   display: inline-flex;
   flex-direction: column;
@@ -63,30 +65,30 @@ a:hover { text-decoration: underline; }
 }
 .lockup-line1,
 .lockup-line2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Libre Caslon Display", serif;
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 400;
 }
 .lockup-line1 {
-  font-size: clamp(26px, 4.2vw, 44px);
-  line-height: 1.06;
-  letter-spacing: 0.06em; /* tighter, more elegant */
+  font-size: clamp(28px, 4.4vw, 48px);
+  line-height: 1.05;
+  letter-spacing: 0.06em;
 }
 .lockup-line2 {
-  font-size: clamp(11px, 1.6vw, 15px); /* smaller 'surline' */
-  line-height: 1.1;
-  letter-spacing: 0.16em;
+  font-size: clamp(12px, 1.6vw, 16px);
+  line-height: 1.05;
+  letter-spacing: 0.18em;      /* subtle, elegant */
 }
 .lockup-divider {
-  width: min(18ch, 60vw);  /* always centered & proportional */
+  width: min(18ch, 60vw);
   height: 1px;
-  background: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.7);
 }
 
-/* Headline & sub */
+/* Headline & sub (headlines in Display for cohesion) */
 .hero h1 {
-  font-family: 'Cormorant Garamond', serif; /* headings in serif for brand cohesion */
-  font-weight: 600;
+  font-family: "Libre Caslon Display", serif;
+  font-weight: 400;
   font-size: clamp(24px, 4.6vw, 46px);
   margin: 8px 0 10px;
   letter-spacing: .01em;
@@ -94,13 +96,14 @@ a:hover { text-decoration: underline; }
 .sub {
   color: var(--muted);
   margin: 0 0 22px;
-  font-size: clamp(13px, 2.1vw, 17px); /* slightly smaller */
+  font-size: clamp(13px, 2.1vw, 17px);
   letter-spacing: .02em;
 }
 .cta .btn {
   display: inline-block; padding: 12px 18px; border: 1px solid var(--white);
-  border-radius: 999px; font-weight: 600; letter-spacing: .3px;
+  border-radius: 999px; font-weight: 700; letter-spacing: .04em;
   transition: transform .2s ease, background .2s ease, color .2s ease;
+  font-family: "Libre Caslon Text", serif;
 }
 .cta .btn:hover { transform: translateY(-1px); background: var(--white); color: var(--black); text-decoration: none; }
 
@@ -110,10 +113,10 @@ a:hover { text-decoration: underline; }
 .section-intro { max-width: 760px; margin: 0 auto 36px; text-align: center; }
 .section-intro p { color: var(--muted); }
 
-/* Headings (serif for classic look) */
+/* Headings */
 h2, h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 600;
+  font-family: "Libre Caslon Display", serif;
+  font-weight: 400;
   letter-spacing: 0.01em;
   margin-top: 0;
 }
@@ -161,5 +164,5 @@ h2, h3 {
   .menu.open { display: flex; }
   .nav-toggle { display: inline-block; }
   .hero-inner { padding: 78px 18px 70px; }
-  .lockup-divider { width: min(16ch, 70vw); } /* keep centered & tidy on mobile */
+  .lockup-divider { width: min(16ch, 70vw); }
 }
