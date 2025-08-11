@@ -50,26 +50,40 @@ a:hover { text-decoration: underline; }
 .hero-inner { position: relative; padding: 90px 20px 80px; }
 
 /* Two-line serif lockup */
+./* Two-line serif lockup */
 .hero-lockup {
-  display: grid; gap: 8px; place-items: center;
+  display: grid;
+  gap: 6px;
+  place-items: center;
   margin: 0 auto 18px;
   text-transform: uppercase;
-  letter-spacing: .18em;
   text-align: center;
   user-select: none;
 }
+
 .lockup-line1,
 .lockup-line2 {
-  font-family: Georgia, Garamond, "Times New Roman", Times, serif;
+  font-family: 'Playfair Display', serif;  /* refined serif font */
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 500;
 }
-.lockup-line1 { font-size: clamp(24px, 4.2vw, 44px); line-height: 1.1; }
-.lockup-line2 { font-size: clamp(12px, 1.6vw, 16px); line-height: 1.2; letter-spacing: .28em; }
+
+.lockup-line1 {
+  font-size: clamp(28px, 4.5vw, 46px);
+  line-height: 1.1;
+  letter-spacing: 0.08em; /* tighter */
+}
+
+.lockup-line2 {
+  font-size: clamp(13px, 1.8vw, 18px);
+  line-height: 1.2;
+  letter-spacing: 0.18em;
+}
+
 .lockup-divider {
-  width: min(240px, 40vw);
+  width: min(160px, 32vw);   /* shorter line */
   height: 1px;
-  background: rgba(255,255,255,0.82);
+  background: rgba(255,255,255,0.75); /* softer line */
 }
 
 /* Headline & sub */
