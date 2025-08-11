@@ -62,7 +62,7 @@ a:hover { text-decoration: underline; }
 }
 html[data-theme="dark"] .nav { background: rgba(15,15,16,0.85); }
 
-.brand img { height: 48px; width: auto; display: block; }
+.brand img { height: 70px; width: auto; display: block; }
 .menu { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; }
 .menu a { color: var(--muted); }
 .menu a:hover { color: var(--fg); }
@@ -86,7 +86,7 @@ html[data-theme="dark"] .hero-media { filter: grayscale(100%) contrast(110%) bri
   content: ""; position: absolute; inset: 0; background: var(--overlay);
 }
 .hero-inner { position: relative; padding: 80px 20px; }
-.hero-logo { height: 90px; width: auto; margin: 0 auto 18px; opacity: 0.96; }
+.hero-logo { height: 150px; width: auto; margin: 0 auto 18px; opacity: 0.96; }
 @media (min-width: 960px) { .hero-logo { height: 110px; } }
 @media (min-width: 960px) { .hero-logo { height: 72px; } }
 .hero h1 { font-size: clamp(26px, 4.6vw, 46px); margin: 0 0 10px; letter-spacing: .2px; color: #fff; }
