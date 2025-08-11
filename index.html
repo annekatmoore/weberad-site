@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -8,35 +8,39 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Weber International Advisory" />
-  <meta property="og:description" content="Your discreet bridge to the U.S. market." />
+  <meta property="og:description" content="Discreet U.S. market entry, real estate, and representation for European companies and family offices." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" />
-  <meta property="og:image:alt" content="Monochrome architectural pattern" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1435527173128-983b87201f4d?q=80&w=1600&auto=format&fit=crop" />
+  <meta property="og:image:alt" content="Monochrome city architecture" />
 
-  <!-- Favicon (optional) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='48' x='8' font-size='48'%3EWI%3C/text%3E%3C/svg%3E">
-
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header" id="top" role="banner" aria-label="Weber International Advisory">
     <nav class="nav">
-      <a class="brand" href="#top" aria-label="Weber International Advisory">Weber International Advisory</a>
+      <a class="brand" href="#top" aria-label="Weber International Advisory">
+        <!-- Your logo (upload to /assets/logo.png) -->
+        <img src="assets/logo.png" alt="Weber International Advisory" />
+      </a>
       <button class="nav-toggle" aria-controls="menu" aria-expanded="false">Menu</button>
       <ul id="menu" class="menu" role="navigation">
         <li><a href="#services">Services</a></li>
         <li><a href="#approach">Approach</a></li>
         <li><a href="#clients">Clients</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><button id="themeBtn" class="linklike" aria-label="Toggle theme">Theme</button></li>
       </ul>
     </nav>
 
     <section class="hero">
-      <div class="hero-media" role="img" aria-label="Black and white architectural background"></div>
+      <div class="hero-media" role="img" aria-label="Black and white city architecture"></div>
       <div class="hero-inner">
-        <h1>Your discreet bridge to the U.S. market.</h1>
-        <p class="sub">Market entry • Real estate concierge • Representation</p>
+        <!-- Optional logo in hero; remove if you prefer only in nav -->
+        <img class="hero-logo" src="assets/logo.png" alt="Weber International Advisory" />
+        <h1>Advisory & representation for your U.S. presence.</h1>
+        <p class="sub">U.S. market entry • Real estate concierge • Discreet representation</p>
         <div class="cta">
           <a class="btn" href="#contact">Start the conversation</a>
         </div>
@@ -45,26 +49,43 @@
   </header>
 
   <main id="content">
-    <section id="services" class="section section--grid">
+    <section id="services" class="section">
       <div class="section-intro">
         <h2>Services</h2>
-        <p>Focused, senior-only support for European companies, luxury brands, and family offices entering or expanding in the United States.</p>
+        <p>Senior-level guidance and on‑the‑ground execution for European companies, luxury brands, and family offices entering or expanding in the U.S., with a focus on Florida and nationwide opportunities.</p>
       </div>
 
-      <article class="card">
-        <h3>U.S. Market Entry</h3>
-        <p>Feasibility, go‑to‑market, soft‑landing in Palm Beach, FL. Vendor selection, legal/accounting introductions, first hires, and on‑the‑ground execution.</p>
-      </article>
+      <div class="grid">
+        <article class="card">
+          <h3>U.S. Market Entry Consulting</h3>
+          <p>Market research, feasibility, and go‑to‑market strategy with practical next steps and senior oversight.</p>
+        </article>
 
-      <article class="card">
-        <h3>Real Estate Concierge</h3>
-        <p>Confidential search and representation across luxury residential and boutique commercial. Shortlists, private viewings, and deal stewardship end‑to‑end.</p>
-      </article>
+        <article class="card">
+          <h3>Visa & Relocation Assistance</h3>
+          <p>Coordination with trusted immigration partners for investor and executive visas, plus executive relocation support.</p>
+        </article>
 
-      <article class="card">
-        <h3>Representation & Presence</h3>
-        <p>Establish a credible U.S. footprint. Local brand guardianship, event placement, and relationship management in Palm Beach and beyond.</p>
-      </article>
+        <article class="card">
+          <h3>Real Estate Concierge</h3>
+          <p>Premium residential and boutique commercial search, off‑market access, private viewings, and end‑to‑end deal support.</p>
+        </article>
+
+        <article class="card">
+          <h3>Corporate Setup & Compliance</h3>
+          <p>Introductions to legal, tax, and accounting professionals for entity formation, compliance, and ongoing governance.</p>
+        </article>
+
+        <article class="card">
+          <h3>Representation & Brand Presence</h3>
+          <p>Trusted local representation safeguarding your brand and interests with measured visibility in the right circles.</p>
+        </article>
+
+        <article class="card">
+          <h3>Event & Network Access</h3>
+          <p>Curated introductions and selective event placement to accelerate positioning and opportunity flow.</p>
+        </article>
+      </div>
     </section>
 
     <section id="approach" class="section section--alt">
@@ -97,7 +118,7 @@
           </div>
           <div class="item">
             <h3>Luxury & Heritage Brands</h3>
-            <p>Palm Beach representation, event access, and storefront scouting.</p>
+            <p>Representation, storefront scouting, and placement in selective environments.</p>
           </div>
           <div class="item">
             <h3>Mid‑Market Companies</h3>
@@ -112,7 +133,7 @@
         <h2>Contact</h2>
         <p class="lead">For confidential enquiries, please email:</p>
         <p class="email"><a href="mailto:contact@weberad.com">contact@weberad.com</a></p>
-        <p class="meta">Palm Beach, Florida • United States</p>
+        <p class="meta">United States • Focus on Florida</p>
       </div>
     </section>
   </main>
@@ -124,7 +145,7 @@
   </footer>
 
   <script>
-    // Mobile nav toggle (no frameworks)
+    // Mobile nav toggle
     const toggle = document.querySelector('.nav-toggle');
     const menu = document.getElementById('menu');
     if (toggle && menu) {
@@ -134,6 +155,19 @@
         menu.classList.toggle('open');
       });
     }
+    // Theme toggle (light <-> dark)
+    const btn = document.getElementById('themeBtn');
+    btn?.addEventListener('click', () => {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+    // Persist theme
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
     // Current year
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
