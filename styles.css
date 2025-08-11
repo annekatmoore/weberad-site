@@ -77,8 +77,7 @@ html[data-theme="dark"] .nav { background: rgba(15,15,16,0.85); }
 .hero { position: relative; min-height: 72vh; display: grid; place-items: center; text-align: center; }
 .hero-media {
   position: absolute; inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1435527173128-983b87201f4d?q=80&w=2000&auto=format&fit=crop');
-  /* city architecture, monochrome */
+  background-image: url('assets/hero-marina.jpg');
   background-size: cover; background-position: center;
   filter: grayscale(100%) contrast(110%) brightness(75%);
 }
