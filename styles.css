@@ -79,7 +79,7 @@ html[data-theme="dark"] .nav { background: rgba(15,15,16,0.85); }
   background-image: url('assets/hero-marina.jpg');
   background-size: cover;
   background-position: center;
-  filter: contrast(105%) brightness(92%);
+  filter: grayscale(100%) contrast(110%) brightness(90%);
 }
 html[data-theme="dark"] .hero-media { filter: grayscale(100%) contrast(110%) brightness(60%); }
 .hero::after {
