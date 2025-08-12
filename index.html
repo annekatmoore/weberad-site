@@ -10,22 +10,23 @@
   <meta property="og:title" content="Weber International Advisory" />
   <meta property="og:description" content="Discreet U.S. market entry, real estate, and representation for European companies and family offices." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" />
-  <meta property="og:image:alt" content="Monochrome architectural pattern" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=1600&auto=format&fit=crop" />
+  <meta property="og:image:alt" content="Waterfront homes with boats" />
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='48' x='6' font-size='46'%3EWI%3C/text%3E%3C/svg%3E">
-
-  <!-- Fonts: Libre Caslon (Display for headings/lockup, Text for body) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
-
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=2" />
+
+  <!-- Main styles (cache-busted to avoid old CSS) -->
+  <link rel="stylesheet" href="styles.css?v=blue1" />
 </head>
 <body>
   <header class="site-header" id="top" role="banner" aria-label="Weber International Advisory">
     <nav class="nav">
+      <!-- Logo on the LEFT (image from assets/logo.png) -->
+      <a class="brand" href="#top" aria-label="Weber International Advisory">
+        <img src="assets/logo.png" alt="Weber International Advisory" />
+      </a>
+
       <button class="nav-toggle" aria-controls="menu" aria-expanded="false">Menu</button>
       <ul id="menu" class="menu" role="navigation">
         <li><a href="#services">Services</a></li>
@@ -36,15 +37,8 @@
     </nav>
 
     <section class="hero">
-      <div class="hero-media" role="img" aria-label="Black and white mountain background"></div>
+      <div class="hero-media" role="img" aria-label="Waterfront houses and boats"></div>
       <div class="hero-inner">
-        <!-- Two-line serif lockup -->
-        <div class="hero-lockup" aria-label="Weber International Advisory typographic logo">
-          <div class="lockup-line1">WEBER</div>
-          <div class="lockup-divider" aria-hidden="true"></div>
-          <div class="lockup-line2">INTERNATIONAL ADVISORY</div>
-        </div>
-
         <h1>Advisory & representation for your U.S. presence.</h1>
         <p class="sub">U.S. market entry • Real estate concierge • Discreet representation</p>
         <div class="cta">
@@ -58,12 +52,12 @@
     <section id="services" class="section section--grid">
       <div class="section-intro">
         <h2>Services</h2>
-        <p>Senior-level guidance and on-the-ground execution for European companies, luxury brands, and family offices entering or expanding in the U.S., with a focus on Florida and nationwide opportunities.</p>
+        <p>Senior-level guidance and on‑the‑ground execution for European companies, luxury brands, and family offices entering or expanding in the United States.</p>
       </div>
 
       <article class="card">
         <h3>U.S. Market Entry Consulting</h3>
-        <p>Market research, feasibility, and go-to-market strategy with practical next steps and senior oversight.</p>
+        <p>Market research, feasibility, and go‑to‑market strategy with practical next steps and senior oversight.</p>
       </article>
 
       <article class="card">
@@ -73,7 +67,7 @@
 
       <article class="card">
         <h3>Real Estate Concierge</h3>
-        <p>Premium residential and boutique commercial search, off-market access, private viewings, and end-to-end deal support.</p>
+        <p>Premium residential and boutique commercial search, off‑market access, private viewings, and end‑to‑end deal support.</p>
       </article>
 
       <article class="card">
@@ -98,7 +92,7 @@
         <ul class="pillars">
           <li>
             <h3>Discreet</h3>
-            <p>Low-visibility, high-trust execution. Your interests first, always.</p>
+            <p>Low‑visibility, high‑trust execution. Your interests first, always.</p>
           </li>
           <li>
             <h3>Decisive</h3>
@@ -125,7 +119,7 @@
             <p>Representation, storefront scouting, and placement in selective environments.</p>
           </div>
           <div class="item">
-            <h3>Mid-Market Companies</h3>
+            <h3>Mid‑Market Companies</h3>
             <p>Practical U.S. entry with lean spend and senior execution.</p>
           </div>
         </div>
@@ -149,6 +143,7 @@
   </footer>
 
   <script>
+    // Mobile nav toggle (no frameworks)
     const toggle = document.querySelector('.nav-toggle');
     const menu = document.getElementById('menu');
     if (toggle && menu) {
@@ -158,6 +153,7 @@
         menu.classList.toggle('open');
       });
     }
+    // Current year
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
