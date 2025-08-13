@@ -1,8 +1,10 @@
 /* ======================================
    Weber International Advisory — Styles
-   Reverted to earlier fonts (Playfair + Lato),
-   removed top panel, bigger logo,
-   hero “zoomed out” feel & moved down.
+   Proportions tuned to match mockup:
+   • Large stacked logo
+   • No top panel (header overlays hero)
+   • Hero image lower & “zoomed out”
+   • Playfair (headings) + Lato (body)
 ====================================== */
 
 /* ---- Theme / Base ---- */
@@ -15,9 +17,9 @@
   --line:#e6edf5;
   --white:#fff;
 
-  /* Tweak these two to fine-tune logo size */
-  --logo-h: 180px;     /* desktop */
-  --logo-h-sm: 110px;  /* mobile */
+  /* Proportion controls (tweak here if needed) */
+  --logo-h: 210px;     /* desktop logo height (mockup-large) */
+  --logo-h-sm: 120px;  /* mobile logo height */
 
   --sans: "Lato", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   --serif: "Playfair Display", Georgia, "Times New Roman", Times, serif;
@@ -28,25 +30,25 @@ html,body{margin:0;padding:0}
 body{ background:var(--white); color:var(--ink); font:16px/1.65 var(--sans); }
 h1,h2,h3{ font-family:var(--serif); }
 
-/* ---- Layout ---- */
+/* ---- Layout helpers ---- */
 .container{ width:min(1180px, 92%); margin-inline:auto; }
 .section{ padding:72px 0; }
 .section-alt{ background:var(--sky); }
 
-/* ---- Header (NOT sticky; transparent; no top bar) ---- */
+/* ---- Header (overlay, NOT sticky; no top bar) ---- */
 .site-header{
   position:absolute; top:0; left:0; right:0; z-index:10;
   background:transparent !important; border:none !important; box-shadow:none !important;
 }
 .header-inner{
   display:flex; align-items:center; justify-content:space-between;
-  padding:16px 0;
+  padding:18px 0;
 }
 .brand-logo{ height:var(--logo-h); width:auto; display:block; }
 @media (max-width:560px){ .brand-logo{ height:var(--logo-h-sm); } }
 
 /* Nav */
-.site-nav{ display:flex; gap:28px; align-items:center; }
+.site-nav{ display:flex; gap:32px; align-items:center; }
 .site-nav a{ color:var(--ink); text-decoration:none; font-weight:600; letter-spacing:.2px; }
 .nav-toggle{ display:none; background:none; border:0; padding:8px; }
 .nav-toggle span{ display:block; width:24px; height:2px; background:var(--ink); margin:5px 0; border-radius:2px; }
@@ -70,57 +72,54 @@ h1,h2,h3{ font-family:var(--serif); }
 .btn-primary{ background:var(--btn); color:#fff; border:2px solid var(--btn); }
 .btn:hover{ transform:translateY(-1px); }
 
-/* ---- HERO (crisp; visually “zoomed out”; moved down) ---- */
-/* We remove any white overlay and adjust position/padding so
-   more of the skyline is visible (houses appear smaller) and
-   the text sits clearly above the buildings. */
+/* ---- HERO (crisp, lower horizon, visually “zoomed out”) ---- */
+/* No white overlay. We show more of the scene (houses smaller)
+   and push the image DOWN so text sits well above the buildings. */
 .hero{
   position:relative; text-align:center;
-
-  /* “Zoomed out” effect:
-     1) Show more of the top of the image by shifting position upward (80%).
-     2) Keep cover for full-bleed while revealing more skyline.
-     3) Increased bottom padding to place text well above buildings. */
-  background: url('assets/hero-waterfront.png') center 80% / cover no-repeat;
-
-  padding: 160px 0 280px; /* top / bottom */
+  background: url('assets/hero-waterfront.png') center 132% / cover no-repeat;
+  /* ample vertical space like the mockup */
+  padding: 170px 0 340px;  /* top / bottom */
 }
-
 @media (min-width:1200px){
-  /* On very wide screens, nudge slightly further up & give more bottom room */
-  .hero{ background-position:center 78%; padding: 180px 0 320px; }
+  /* slightly more downward shift on big screens */
+  .hero{ background-position:center 140%; padding: 190px 0 380px; }
 }
 @media (max-width:700px){
-  /* On mobile, still reveal more scene (houses smaller) */
-  .hero{ background-position:center 82%; padding: 140px 0 240px; }
+  /* mobile still shows plenty of sky; houses smaller */
+  .hero{ background-position:center 120%; padding: 150px 0 280px; }
 }
 
 .hero-content{ position:relative; z-index:1; }
 
+/* Headline proportions as in mockup */
 .hero-title{
-  margin:0 0 12px;
-  font-weight:700; /* Playfair looks refined here; no extra bold */
-  font-size:clamp(42px, 7vw, 84px);
-  line-height:1.08;
-  letter-spacing:-.3px;
+  margin:0 0 14px;
+  font-weight:700;
+  font-size: clamp(48px, 7.4vw, 96px);  /* big, elegant */
+  line-height:1.06;
+  letter-spacing:-.25px;
   color:var(--ink);
 }
+
+/* Subline below headline */
 .hero-subtitle{
-  margin:0 auto 26px; max-width:900px;
-  font-size:clamp(18px, 2.1vw, 24px);
+  margin:0 auto 30px; max-width:900px;
+  font-size: clamp(18px, 2.1vw, 24px);
   line-height:1.5; color:var(--ink-2);
 }
+
 .hero-cta{ margin-top:6px; }
 
-/* ---- Content ---- */
+/* ---- Content sections ---- */
 .section h2{
   margin:0 0 14px;
-  font-size:clamp(26px, 3vw, 36px);
+  font-size: clamp(26px, 3vw, 36px);
   letter-spacing:-.1px;
 }
 .section h3{
   margin:18px 0 6px;
-  font-size:clamp(18px, 2.1vw, 24px);
+  font-size: clamp(18px, 2.1vw, 24px);
 }
 .section p{ margin:0 0 12px; color:var(--ink-2); }
 
