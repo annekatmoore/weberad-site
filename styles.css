@@ -1,64 +1,92 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Weber International Advisory</title>
+/* Base */
+:root {
+  --text: #0f172a;        /* slate-900 */
+  --muted: #475569;       /* slate-600 */
+  --bg: #ffffff;
+  --accent: #0ea5e9;      /* sky-500 */
+  --maxw: 1080px;
 
-  <!-- Slim, clean font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  /* Hero composition (tweak these 2 lines if needed) */
+  --hero-height: min(72vh, 900px);
+  --hero-y: 35%;          /* move LOWER to show MORE sky: 30–45% is good */
+}
 
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <!-- Header / Nav (no top panel) -->
-  <header class="site-header">
-    <a class="brand" href="/">Weber International Advisory</a>
-    <nav class="site-nav">
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+* { box-sizing: border-box; }
+html { font-size: 16px; }
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: "Inter", -apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  <!-- HERO -->
-  <section id="hero" class="hero">
-    <!-- If you prefer img instead of CSS background, use the commented <img> and remove the background in CSS -->
-    <!-- <img src="HERO_IMAGE.jpg" alt="Palm Beach waterfront" loading="eager"> -->
-    <div class="hero-inner">
-      <h1>Discrete U.S. Market Entry & Representation</h1>
-      <p>For European companies & family offices seeking a single trusted partner in Florida.</p>
-    </div>
-  </section>
+/* Typography */
+h1 { font-size: clamp(28px, 5vw, 42px); line-height: 1.15; font-weight: 600; margin: 0 0 0.6em; }
+h2 { font-size: clamp(22px, 3.6vw, 30px); line-height: 1.2; font-weight: 600; margin: 0 0 0.5em; }
+h3 { font-size: clamp(18px, 2.6vw, 22px); line-height: 1.25; font-weight: 600; margin: 0 0 0.35em; }
+p, li { font-size: 1rem; line-height: 1.6; color: var(--muted); }
 
-  <main>
-    <section id="services" class="section">
-      <h2>Services</h2>
-      <ul class="grid">
-        <li><h3>Landing Concierge</h3><p>Company formation, registered address, basic compliance, banking coordination.</p></li>
-        <li><h3>Growth Setup</h3><p>Lightweight HR, payroll partner setup, accounting coordination, first hires.</p></li>
-        <li><h3>Property & Lifestyle</h3><p>Curated property search, relocation support, executive concierge.</p></li>
-      </ul>
-    </section>
+/* Layout helpers */
+.section { max-width: var(--maxw); margin: 72px auto; padding: 0 20px; }
+.grid { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.grid h3 { margin-top: 0; }
 
-    <section id="about" class="section">
-      <h2>About</h2>
-      <p>EU-to-U.S. boutique with a white-glove, single-relationship model based in Palm Beach.</p>
-    </section>
+/* Header (no top panel of any kind) */
+.site-header {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.site-nav a {
+  text-decoration: none;
+  color: var(--muted);
+  margin-left: 20px;
+  font-weight: 500;
+}
+.site-nav a:hover { color: var(--text); }
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:contact@weberad.com">contact@weberad.com</a></p>
-    </section>
-  </main>
+/* HERO (CSS background version – easiest) */
+.hero {
+  position: relative;
+  height: var(--hero-height);
+  background-image: url("HERO_IMAGE.jpg"); /* <-- REPLACE with your path */
+  background-size: cover;          /* fills width */
+  background-repeat: no-repeat;
+  background-position: 50% var(--hero-y); /* lower value shows more top/sky */
+  display: grid;
+  place-items: end start;
+  padding: 24px 20px;
+}
+.hero-inner {
+  max-width: var(--maxw);
+  width: 100%;
+  margin: 0 auto;
+  color: white;
+  text-shadow: 0 2px 12px rgba(0,0,0,.45);
+}
+.hero p { color: rgba(255,255,255,.95); }
 
-  <footer class="site-footer">
-    <small>© <span id="y"></span> Weber International Advisory</small>
-  </footer>
+/* If you insist on an <img> hero instead, comment out the background above and use:
+.hero { position: relative; height: var(--hero-height); display: grid; place-items: end start; padding: 24px 20px; }
+.hero > img { width: 100%; height: 100%; object-fit: cover; object-position: 50% var(--hero-y); position: absolute; inset: 0; z-index: -1; }
+*/
 
-  <script>
-    // current year
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+/* Footer */
+.site-footer {
+  max-width: var(--maxw);
+  margin: 64px auto 40px;
+  padding: 0 20px;
+  color: var(--muted);
+}
