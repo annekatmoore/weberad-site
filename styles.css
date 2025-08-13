@@ -62,7 +62,7 @@ a:hover { text-decoration: underline; }
   background-image:
     /* SOFT WHITE TINT to match the mockup */
     linear-gradient(to bottom, rgba(237,245,255,.72) 0%, rgba(237,245,255,.56) 45%, rgba(237,245,255,.40) 100%),
-    url('assets/hero-waterfront.jpg');
+    url('assets/hero-waterfront.png');
 
   background-size: cover;
 
