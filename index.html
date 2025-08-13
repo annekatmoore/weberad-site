@@ -4,146 +4,85 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Weber International Advisory</title>
-  <meta name="description" content="Discreet U.S. market entry, real estate concierge, and representation for European companies and family offices." />
+  <meta name="description" content="Expert guidance for the U.S. market. We assist international clients with market entry and obtaining visas." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Weber International Advisory" />
-  <meta property="og:description" content="Discreet U.S. market entry, real estate, and representation for European companies and family offices." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=1600&auto=format&fit=crop" />
-  <meta property="og:image:alt" content="Waterfront homes with boats" />
+  <!-- Fonts: headings/logo = Libre Caslon Display, body/nav = Libre Caslon Text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display:wght@400;700&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='48' x='6' font-size='46'%3EWI%3C/text%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-
-  <!-- Main styles (cache-busted to avoid old CSS) -->
-  <link rel="stylesheet" href="styles.css?v=blue1" />
+  <!-- Styles (cache-busted so GitHub Pages picks up changes) -->
+  <link rel="stylesheet" href="styles.css?v=blue-final" />
 </head>
 <body>
-  <header class="site-header" id="top" role="banner" aria-label="Weber International Advisory">
-    <nav class="nav">
-      <!-- Logo on the LEFT (image from assets/logo.png) -->
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary">
+      <!-- Real logo file (upload to assets/logo.png) -->
       <a class="brand" href="#top" aria-label="Weber International Advisory">
         <img src="assets/logo.png" alt="Weber International Advisory" />
       </a>
 
       <button class="nav-toggle" aria-controls="menu" aria-expanded="false">Menu</button>
-      <ul id="menu" class="menu" role="navigation">
+      <ul id="menu" class="menu">
         <li><a href="#services">Services</a></li>
         <li><a href="#approach">Approach</a></li>
-        <li><a href="#clients">Clients</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
+    <!-- HERO -->
     <section class="hero">
-      <div class="hero-media" role="img" aria-label="Waterfront houses and boats"></div>
+      <div class="hero-media" role="img" aria-label="Palm Beach–style waterfront homes with palms and boats"></div>
       <div class="hero-inner">
-        <h1>Advisory & representation for your U.S. presence.</h1>
-        <p class="sub">U.S. market entry • Real estate concierge • Discreet representation</p>
-        <div class="cta">
-          <a class="btn" href="#contact">Start the conversation</a>
-        </div>
+        <h1>Expert Guidance for<br />the U.S. Market</h1>
+        <p class="sub">We assist international clients with market<br class="br-md" /> entry and obtaining visas.</p>
+        <a class="btn" href="#contact">LEARN MORE</a>
       </div>
     </section>
   </header>
 
   <main id="content">
-    <section id="services" class="section section--grid">
-      <div class="section-intro">
+    <section id="services" class="section">
+      <div class="wrap">
         <h2>Services</h2>
-        <p>Senior-level guidance and on‑the‑ground execution for European companies, luxury brands, and family offices entering or expanding in the United States.</p>
+        <ul class="service-list">
+          <li><strong>U.S. Market Entry</strong> — research, feasibility, and go‑to‑market plans.</li>
+          <li><strong>Visas & Relocation</strong> — coordinated with trusted immigration partners.</li>
+          <li><strong>Real Estate Concierge</strong> — premium residential & boutique commercial.</li>
+          <li><strong>Corporate Setup & Compliance</strong> — legal, tax, and accounting introductions.</li>
+          <li><strong>Representation & Presence</strong> — local brand stewardship and placement.</li>
+        </ul>
       </div>
-
-      <article class="card">
-        <h3>U.S. Market Entry Consulting</h3>
-        <p>Market research, feasibility, and go‑to‑market strategy with practical next steps and senior oversight.</p>
-      </article>
-
-      <article class="card">
-        <h3>Visa & Relocation Assistance</h3>
-        <p>Coordination with trusted immigration partners for investor and executive visas, plus executive relocation support.</p>
-      </article>
-
-      <article class="card">
-        <h3>Real Estate Concierge</h3>
-        <p>Premium residential and boutique commercial search, off‑market access, private viewings, and end‑to‑end deal support.</p>
-      </article>
-
-      <article class="card">
-        <h3>Corporate Setup & Compliance</h3>
-        <p>Introductions to legal, tax, and accounting professionals for entity formation, compliance, and ongoing governance.</p>
-      </article>
-
-      <article class="card">
-        <h3>Representation & Brand Presence</h3>
-        <p>Trusted local representation safeguarding your brand and interests with measured visibility in the right circles.</p>
-      </article>
-
-      <article class="card">
-        <h3>Event & Network Access</h3>
-        <p>Curated introductions and selective event placement to accelerate positioning and opportunity flow.</p>
-      </article>
     </section>
 
     <section id="approach" class="section section--alt">
       <div class="wrap">
         <h2>Approach</h2>
-        <ul class="pillars">
-          <li>
-            <h3>Discreet</h3>
-            <p>Low‑visibility, high‑trust execution. Your interests first, always.</p>
-          </li>
-          <li>
-            <h3>Decisive</h3>
-            <p>Clear options, fast action, and measurable next steps.</p>
-          </li>
-          <li>
-            <h3>Selective</h3>
-            <p>We limit active mandates to preserve senior attention.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="clients" class="section">
-      <div class="wrap">
-        <h2>Who We Serve</h2>
-        <div class="list">
-          <div class="item">
-            <h3>European Family Offices</h3>
-            <p>U.S. real estate access, trusted local partners, and quiet deal flow.</p>
-          </div>
-          <div class="item">
-            <h3>Luxury & Heritage Brands</h3>
-            <p>Representation, storefront scouting, and placement in selective environments.</p>
-          </div>
-          <div class="item">
-            <h3>Mid‑Market Companies</h3>
-            <p>Practical U.S. entry with lean spend and senior execution.</p>
-          </div>
+        <div class="pillars">
+          <div><h3>Discreet</h3><p>Low‑visibility, high‑trust execution.</p></div>
+          <div><h3>Decisive</h3><p>Clear options, fast action, measurable next steps.</p></div>
+          <div><h3>Selective</h3><p>Limited mandates to preserve senior attention.</p></div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section section--contact">
+    <section id="contact" class="section">
       <div class="wrap">
         <h2>Contact</h2>
-        <p class="lead">For confidential enquiries, please email:</p>
+        <p class="lead">For confidential enquiries:</p>
         <p class="email"><a href="mailto:contact@weberad.com">contact@weberad.com</a></p>
-        <p class="meta">United States • Focus on Florida</p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
+  <footer class="site-footer">
     <div class="wrap">
       <p>© <span id="y"></span> Weber International Advisory. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    // Mobile nav toggle (no frameworks)
+    // Mobile nav
     const toggle = document.querySelector('.nav-toggle');
     const menu = document.getElementById('menu');
     if (toggle && menu) {
@@ -153,7 +92,7 @@
         menu.classList.toggle('open');
       });
     }
-    // Current year
+    // Year
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
