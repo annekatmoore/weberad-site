@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Weber International Advisory</title>
   <meta name="description" content="Expert Guidance for the U.S. Market — Weber International Advisory assists European companies, family offices, and HNW individuals establish a strong presence in the United States." />
-  <meta name="theme-color" content="#0b2a4a" />
+  <meta name="theme-color" content="#ffffff" />
 
   <!-- Fonts: Playfair Display (headings) + Lato (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,10 +16,10 @@
 </head>
 
 <body>
-  <!-- ===== Header ===== -->
-  <header class="site-header">
+  <!-- ===== Header (unchanged structure) ===== -->
+  <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a class="brand" href="#">
+      <a class="brand" href="#" aria-label="Weber International Advisory — Home">
         <img src="assets/logo.png" class="brand-logo" alt="Weber International Advisory" />
       </a>
 
@@ -27,35 +27,38 @@
         <span></span><span></span><span></span>
       </button>
 
-      <nav id="nav" class="site-nav">
-        <a href="#about">About</a>
+      <nav id="nav" class="site-nav" aria-label="Main">
         <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- ===== Hero ===== -->
+  <!-- ===== Hero (same layout, refined fonts/overlay/position) ===== -->
   <section class="hero">
     <div class="container hero-content">
       <h1 class="hero-title">Expert Guidance for the U.S. Market</h1>
       <p class="hero-subtitle">
-        Weber International Advisory assists European companies, family offices, and high-net-worth individuals establish a strong presence in the United States.
+        Weber International Advisory assists European companies, family offices, and high-net-worth individuals
+        establish a strong presence in the United States.
       </p>
-      <a class="btn btn-primary hero-cta" href="#services">LEARN MORE</a>
+      <a class="btn btn-primary hero-cta" href="#services" aria-label="Learn more about our services">LEARN MORE</a>
     </div>
   </section>
 
-  <!-- ===== About ===== -->
-  <section id="about" class="section section-alt">
+  <!-- ===== Approach / About ===== -->
+  <section id="approach" class="section section-alt">
     <div class="container">
       <h2>A Boutique Advisory at the Intersection of Europe and the United States</h2>
       <p>
         With deep ties in both Europe and the U.S., we act as your discreet partner on the ground.
-        We combine strategic market insight with a white-glove approach, ensuring your U.S. expansion or investment is handled flawlessly from the first conversation to the final handshake.
-        Our network spans luxury real estate, private events, local authorities, high-level business contacts, and vetted service providers.
+        We combine strategic market insight with a white-glove approach, ensuring your U.S. expansion or investment
+        is handled flawlessly from the first conversation to the final handshake.
+        Our network spans luxury real estate, private events, local authorities, high-level business contacts,
+        and vetted service providers.
       </p>
-      <ul>
+      <ul class="bullets">
         <li>Discretion and confidentiality at every stage</li>
         <li>On-the-ground presence in Palm Beach, Florida</li>
         <li>Understanding of European business culture and U.S. market dynamics</li>
@@ -69,7 +72,7 @@
     <div class="container">
       <h2>Who We Work With</h2>
       <p>We work with clients who require absolute trust and strategic precision:</p>
-      <ul>
+      <ul class="bullets">
         <li><strong>European Family Offices & HNW Individuals</strong> — seeking real estate, event presence, or investment opportunities in the U.S.</li>
         <li><strong>Luxury & Heritage Brands</strong> — expanding into the American market while preserving brand integrity.</li>
         <li><strong>Private Investors</strong> — seeking vetted opportunities in U.S. real estate and business ventures.</li>
@@ -83,29 +86,19 @@
       <h2>Tailored Solutions for Market Entry and Representation</h2>
 
       <h3>U.S. Market Entry Strategy</h3>
-      <p>
-        We identify the optimal approach for your brand or investment, providing competitive analysis, positioning, and key introductions.
-      </p>
+      <p>We identify the optimal approach for your brand or investment, providing competitive analysis, positioning, and key introductions.</p>
 
       <h3>Representation Services</h3>
-      <p>
-        We act as your discreet representative at meetings, events, and negotiations, ensuring your interests are advanced even when you are not present.
-      </p>
+      <p>We act as your discreet representative at meetings, events, and negotiations, ensuring your interests are advanced even when you are not present.</p>
 
       <h3>Real Estate Advisory</h3>
-      <p>
-        Acquisition, investment, and high-value property searches in Palm Beach, Florida, and other prime locations. Our network includes off-market opportunities.
-      </p>
+      <p>Acquisition, investment, and high-value property searches in Palm Beach, Florida, and other prime locations. Our network includes off-market opportunities.</p>
 
       <h3>Event Presence & Hospitality</h3>
-      <p>
-        We secure your place at the right events — from art fairs to equestrian competitions — and arrange private hospitality that reflects your standards.
-      </p>
+      <p>We secure your place at the right events — from art fairs to equestrian competitions — and arrange private hospitality that reflects your standards.</p>
 
       <h3>Strategic Partnerships</h3>
-      <p>
-        Connecting you to trusted legal, tax, and operational partners to ensure your U.S. activities are fully supported.
-      </p>
+      <p>Connecting you to trusted legal, tax, and operational partners to ensure your U.S. activities are fully supported.</p>
     </div>
   </section>
 
@@ -113,7 +106,7 @@
   <section class="section">
     <div class="container">
       <h2>Why Weber International Advisory</h2>
-      <ul>
+      <ul class="bullets">
         <li><strong>Discretion</strong>: Absolute confidentiality is the foundation of our work.</li>
         <li><strong>Cultural Fluency</strong>: We understand both European expectations and American business realities.</li>
         <li><strong>High-Level Access</strong>: A curated network of decision-makers, property owners, and event organizers.</li>
@@ -127,7 +120,8 @@
     <div class="container">
       <h2>Start the Conversation</h2>
       <p>Your U.S. presence begins with a confidential discussion. Contact us to explore opportunities and outline the best approach for your goals.</p>
-      <form class="contact-form">
+
+      <form class="contact-form" aria-label="Contact form">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required />
 
@@ -139,12 +133,12 @@
 
         <label for="interest">Area of Interest</label>
         <select id="interest" name="interest">
-          <option value="">Select...</option>
-          <option value="market-entry">U.S. Market Entry</option>
-          <option value="representation">Representation Services</option>
-          <option value="real-estate">Real Estate Advisory</option>
-          <option value="events">Event Presence & Hospitality</option>
-          <option value="partnerships">Strategic Partnerships</option>
+          <option value="">Select…</option>
+          <option>U.S. Market Entry</option>
+          <option>Representation Services</option>
+          <option>Real Estate Advisory</option>
+          <option>Event Presence & Hospitality</option>
+          <option>Strategic Partnerships</option>
         </select>
 
         <label for="message">Message</label>
