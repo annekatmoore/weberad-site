@@ -11,9 +11,9 @@
 
 <body>
   <!-- ===== Header ===== -->
-  <header class="site-header" role="banner">
+  <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#" aria-label="Weber International Advisory — Home">
+      <a class="brand" href="#">
         <img src="assets/logo.png" class="brand-logo" alt="Weber International Advisory" />
       </a>
 
@@ -21,46 +21,131 @@
         <span></span><span></span><span></span>
       </button>
 
-      <nav id="nav" class="site-nav" aria-label="Main">
+      <nav id="nav" class="site-nav">
+        <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#about">Approach</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- ===== Hero (full-width background image) ===== -->
+  <!-- ===== Hero ===== -->
   <section class="hero">
-    <div class="hero-overlay"></div>
     <div class="container hero-content">
       <h1 class="hero-title">Expert Guidance for the U.S. Market</h1>
       <p class="hero-subtitle">
-        Weber International Advisory assists European companies, family offices, and high-net-worth individuals
-        establish a strong presence in the United States.
+        Weber International Advisory assists European companies, family offices, and high-net-worth individuals establish a strong presence in the United States.
       </p>
       <a class="btn btn-primary hero-cta" href="#services">LEARN MORE</a>
     </div>
   </section>
 
-  <!-- ===== Placeholder sections (content goes below as you build out) ===== -->
-  <section id="services" class="section">
-    <div class="container">
-      <h2>Services</h2>
-      <p>…</p>
-    </div>
-  </section>
-
+  <!-- ===== About ===== -->
   <section id="about" class="section section-alt">
     <div class="container">
-      <h2>Approach</h2>
-      <p>…</p>
+      <h2>A Boutique Advisory at the Intersection of Europe and the United States</h2>
+      <p>
+        With deep ties in both Europe and the U.S., we act as your discreet partner on the ground.
+        We combine strategic market insight with a white-glove approach, ensuring your U.S. expansion or investment is handled flawlessly from the first conversation to the final handshake.
+        Our network spans luxury real estate, private events, local authorities, high-level business contacts, and vetted service providers.
+      </p>
+      <ul>
+        <li>Discretion and confidentiality at every stage</li>
+        <li>On-the-ground presence in Palm Beach, Florida</li>
+        <li>Understanding of European business culture and U.S. market dynamics</li>
+        <li>Access to exclusive properties, venues, and introductions</li>
+      </ul>
     </div>
   </section>
 
-  <section id="contact" class="section">
+  <!-- ===== Who We Work With ===== -->
+  <section class="section">
     <div class="container">
-      <h2>Contact</h2>
-      <p>…</p>
+      <h2>Who We Work With</h2>
+      <p>We work with clients who require absolute trust and strategic precision:</p>
+      <ul>
+        <li><strong>European Family Offices & HNW Individuals</strong> — seeking real estate, event presence, or investment opportunities in the U.S.</li>
+        <li><strong>Luxury & Heritage Brands</strong> — expanding into the American market while preserving brand integrity.</li>
+        <li><strong>Private Investors</strong> — seeking vetted opportunities in U.S. real estate and business ventures.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Services ===== -->
+  <section id="services" class="section section-alt">
+    <div class="container">
+      <h2>Tailored Solutions for Market Entry and Representation</h2>
+
+      <h3>U.S. Market Entry Strategy</h3>
+      <p>
+        We identify the optimal approach for your brand or investment, providing competitive analysis, positioning, and key introductions.
+      </p>
+
+      <h3>Representation Services</h3>
+      <p>
+        We act as your discreet representative at meetings, events, and negotiations, ensuring your interests are advanced even when you are not present.
+      </p>
+
+      <h3>Real Estate Advisory</h3>
+      <p>
+        Acquisition, investment, and high-value property searches in Palm Beach, Florida, and other prime locations. Our network includes off-market opportunities.
+      </p>
+
+      <h3>Event Presence & Hospitality</h3>
+      <p>
+        We secure your place at the right events — from art fairs to equestrian competitions — and arrange private hospitality that reflects your standards.
+      </p>
+
+      <h3>Strategic Partnerships</h3>
+      <p>
+        Connecting you to trusted legal, tax, and operational partners to ensure your U.S. activities are fully supported.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Why Weber ===== -->
+  <section class="section">
+    <div class="container">
+      <h2>Why Weber International Advisory</h2>
+      <ul>
+        <li><strong>Discretion</strong>: Absolute confidentiality is the foundation of our work.</li>
+        <li><strong>Cultural Fluency</strong>: We understand both European expectations and American business realities.</li>
+        <li><strong>High-Level Access</strong>: A curated network of decision-makers, property owners, and event organizers.</li>
+        <li><strong>On-the-Ground Execution</strong>: We handle details locally so you can focus on the big picture.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2>Start the Conversation</h2>
+      <p>Your U.S. presence begins with a confidential discussion. Contact us to explore opportunities and outline the best approach for your goals.</p>
+      <form class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="company">Company / Organization</label>
+        <input type="text" id="company" name="company" />
+
+        <label for="interest">Area of Interest</label>
+        <select id="interest" name="interest">
+          <option value="">Select...</option>
+          <option value="market-entry">U.S. Market Entry</option>
+          <option value="representation">Representation Services</option>
+          <option value="real-estate">Real Estate Advisory</option>
+          <option value="events">Event Presence & Hospitality</option>
+          <option value="partnerships">Strategic Partnerships</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
     </div>
   </section>
 
@@ -73,10 +158,7 @@
   </footer>
 
   <script>
-    // year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // simple mobile nav
     const toggle = document.getElementById('navToggle');
     const nav = document.getElementById('nav');
     toggle.addEventListener('click', () => {
