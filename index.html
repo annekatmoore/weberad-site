@@ -4,20 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Weber International Advisory</title>
-  <meta name="description" content="Expert guidance for the U.S. market. We assist international clients with market entry and obtaining visas." />
+  <meta name="description" content="Expert guidance for the U.S. market. We assist international clients with market entry and visa support." />
 
-  <!-- Fonts: headings/logo = Libre Caslon Display, body/nav = Libre Caslon Text -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display:wght@400;700&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Styles (cache-busted so GitHub Pages picks up changes) -->
-  <link rel="stylesheet" href="styles.css?v=blue-final" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css?v=mockup-fix2" />
 </head>
 <body>
   <header class="site-header" id="top">
     <nav class="nav" aria-label="Primary">
-      <!-- Real logo file (upload to assets/logo.png) -->
+      <!-- Real logo file -->
       <a class="brand" href="#top" aria-label="Weber International Advisory">
         <img src="assets/logo.png" alt="Weber International Advisory" />
       </a>
@@ -32,10 +32,10 @@
 
     <!-- HERO -->
     <section class="hero">
-      <div class="hero-media" role="img" aria-label="Palm Beach–style waterfront homes with palms and boats"></div>
+      <div class="hero-media" role="img" aria-label="Waterfront homes and palms"></div>
       <div class="hero-inner">
         <h1>Expert Guidance for<br />the U.S. Market</h1>
-        <p class="sub">We assist international clients with market<br class="br-md" /> entry and obtaining visas.</p>
+        <p class="sub">We assist international clients with market<br class="br-md" /> entry and new location.</p>
         <a class="btn" href="#contact">LEARN MORE</a>
       </div>
     </section>
@@ -47,7 +47,7 @@
         <h2>Services</h2>
         <ul class="service-list">
           <li><strong>U.S. Market Entry</strong> — research, feasibility, and go‑to‑market plans.</li>
-          <li><strong>Visas & Relocation</strong> — coordinated with trusted immigration partners.</li>
+          <li><strong>Visa & Relocation Coordination</strong> — with trusted immigration partners.</li>
           <li><strong>Real Estate Concierge</strong> — premium residential & boutique commercial.</li>
           <li><strong>Corporate Setup & Compliance</strong> — legal, tax, and accounting introductions.</li>
           <li><strong>Representation & Presence</strong> — local brand stewardship and placement.</li>
@@ -82,7 +82,6 @@
   </footer>
 
   <script>
-    // Mobile nav
     const toggle = document.querySelector('.nav-toggle');
     const menu = document.getElementById('menu');
     if (toggle && menu) {
@@ -92,7 +91,6 @@
         menu.classList.toggle('open');
       });
     }
-    // Year
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
