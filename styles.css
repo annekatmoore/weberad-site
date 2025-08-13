@@ -1,10 +1,11 @@
 /* ======================================
    Weber International Advisory — Styles
-   Using SAME layout as last version,
-   with only these refinements:
-   • Playfair Display (headings) + Lato (body)
-   • Larger logo
-   • Hero background lowered & less white overlay
+   Refinements requested:
+   • Headings in Cormorant Garamond (refined serif, lighter weight)
+   • Body in Lato
+   • Header NOT sticky
+   • MUCH larger logo
+   • Hero image crisp (no white wash) & horizon LOWER
 ====================================== */
 
 /* ---- Theme / Base ---- */
@@ -17,35 +18,28 @@
   --line:#e6edf5;
   --white:#fff;
 
-  --logo-h: 120px;   /* DESKTOP logo height to match mockup */
-  --logo-h-sm: 72px; /* MOBILE logo height */
+  /* Logo sizes (adjust to taste) */
+  --logo-h: 170px;    /* desktop */
+  --logo-h-sm: 110px; /* mobile */
 
   --sans: "Lato", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  --serif: "Playfair Display", Georgia, "Times New Roman", Times, serif;
+  --serif: "Cormorant Garamond", Georgia, "Times New Roman", Times, serif;
 }
 
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{
-  background:var(--white);
-  color:var(--ink);
-  font:16px/1.65 var(--sans);
-}
+body{ background:var(--white); color:var(--ink); font:16px/1.65 var(--sans); }
+h1,h2,h3{ font-family:var(--serif); font-weight:500; } /* refined (not bold) */
 
-h1,h2,h3{font-family:var(--serif)}
-
-/* ---- Layout helpers ---- */
+/* ---- Layout ---- */
 .container{ width:min(1180px, 92%); margin-inline:auto; }
 .section{ padding:72px 0; }
 .section-alt{ background:var(--sky); }
 .bullets{ margin:10px 0 0; padding-left:20px; }
 .bullets li{ margin:6px 0; color:var(--ink-2) }
 
-/* ---- Header (same structure) ---- */
-.site-header{
-  position:sticky; top:0; z-index:20;
-  background:transparent;  /* hero image shows through */
-}
+/* ---- Header (NOT sticky) ---- */
+.site-header{ background:transparent; }
 .header-inner{
   display:flex; align-items:center; justify-content:space-between;
   padding:18px 0;
@@ -55,17 +49,15 @@ h1,h2,h3{font-family:var(--serif)}
 
 /* Nav */
 .site-nav{ display:flex; gap:28px; align-items:center; }
-.site-nav a{
-  color:var(--ink); text-decoration:none; font-weight:600; letter-spacing:.2px; font-family:var(--sans);
-}
-.nav-toggle{ display:none; background:none; border:0; padding:8px; margin-left:auto; }
+.site-nav a{ color:var(--ink); text-decoration:none; font-weight:600; letter-spacing:.2px; }
+.nav-toggle{ display:none; background:none; border:0; padding:8px; }
 .nav-toggle span{ display:block; width:24px; height:2px; background:var(--ink); margin:5px 0; border-radius:2px; }
 
 @media (max-width:880px){
   .nav-toggle{ display:block; }
   .site-nav{
     position:absolute; right:16px; top:76px; display:none;
-    background:var(--white); border:1px solid var(--line); border-radius:12px; padding:12px 14px;
+    background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 14px;
     box-shadow:0 10px 26px rgba(0,0,0,.08);
     flex-direction:column; align-items:flex-start; gap:12px;
   }
@@ -75,54 +67,53 @@ h1,h2,h3{font-family:var(--serif)}
 /* ---- Buttons ---- */
 .btn{
   display:inline-block; text-decoration:none; font-weight:700;
-  padding:14px 28px; border-radius:8px; transition:transform .15s ease, opacity .15s ease;
-  font-family:var(--sans);
+  padding:14px 28px; border-radius:8px; transition:transform .15s ease;
 }
 .btn-primary{ background:var(--btn); color:#fff; border:2px solid var(--btn); }
 .btn:hover{ transform:translateY(-1px); }
 
-/* ---- HERO (same block, lighter overlay & lower horizon) ---- */
+/* ---- HERO (crisp & lower) ---- */
+/* No white overlay; push background down; ample bottom padding */
 .hero{
   position:relative; text-align:center;
-  background:
-    /* reduced overlay so photo stays crisp (matches mockup) */
-    linear-gradient(to bottom, rgba(255,255,255,.40) 0%, rgba(255,255,255,.20) 30%, rgba(255,255,255,0) 70%),
-    url('assets/hero-waterfront.png') center 96% / cover no-repeat; /* push buildings DOWN */
-  padding:140px 0 230px;  /* vertical space to keep text above buildings */
+  background: url('assets/hero-waterfront.png') center 108% / cover no-repeat;
+  padding:160px 0 300px;
 }
 @media (min-width:1200px){
-  .hero{ background-position:center 100%; padding:160px 0 260px; }
+  .hero{ background-position:center 112%; padding:180px 0 340px; }
 }
 @media (max-width:700px){
-  .hero{ background-position:center 92%; padding:110px 0 180px; }
+  .hero{ background-position:center 102%; padding:130px 0 240px; }
 }
 
 .hero-content{ position:relative; z-index:1; }
 
 .hero-title{
-  margin:0 0 14px;
-  font-weight:800;
-  font-size:clamp(40px, 7vw, 80px);
+  margin:0 0 10px;
+  font-weight:600;                 /* subtle emphasis (not bold/chunky) */
+  font-size:clamp(42px, 7.2vw, 84px);
   line-height:1.08;
-  letter-spacing:-.4px;
+  letter-spacing:.1px;             /* refined serif usually benefits from neutral/positive tracking */
   color:var(--ink);
 }
 .hero-subtitle{
-  margin:0 auto 28px; max-width:900px;
-  font-size:clamp(17px, 2.1vw, 24px);
+  margin:0 auto 26px; max-width:900px;
+  font-size:clamp(18px, 2.1vw, 24px);
   line-height:1.5; color:var(--ink-2);
 }
 .hero-cta{ margin-top:6px; }
 
-/* ---- Content sections ---- */
+/* ---- Content ---- */
 .section h2{
   margin:0 0 14px;
-  font-size:clamp(24px, 3vw, 34px);
-  letter-spacing:-.2px;
+  font-weight:600;
+  font-size:clamp(26px, 3vw, 36px);
+  letter-spacing:.05px;
 }
 .section h3{
   margin:18px 0 6px;
-  font-size:clamp(18px, 2.2vw, 24px);
+  font-weight:500;
+  font-size:clamp(18px, 2.1vw, 24px);
 }
 .section p{ margin:0 0 12px; color:var(--ink-2); }
 
