@@ -1,14 +1,12 @@
-/* Base */
+/* Base settings */
 :root {
-  --text: #0f172a;        /* slate-900 */
-  --muted: #475569;       /* slate-600 */
+  --text: #0f172a;
+  --muted: #475569;
   --bg: #ffffff;
-  --accent: #0ea5e9;      /* sky-500 */
+  --accent: #0ea5e9;
   --maxw: 1080px;
-
-  /* Hero composition (tweak these 2 lines if needed) */
   --hero-height: min(72vh, 900px);
-  --hero-y: 35%;          /* move LOWER to show MORE sky: 30–45% is good */
+  --hero-y: 35%; /* adjust for more/less sky */
 }
 
 * { box-sizing: border-box; }
@@ -29,12 +27,11 @@ h2 { font-size: clamp(22px, 3.6vw, 30px); line-height: 1.2; font-weight: 600; ma
 h3 { font-size: clamp(18px, 2.6vw, 22px); line-height: 1.25; font-weight: 600; margin: 0 0 0.35em; }
 p, li { font-size: 1rem; line-height: 1.6; color: var(--muted); }
 
-/* Layout helpers */
+/* Sections */
 .section { max-width: var(--maxw); margin: 72px auto; padding: 0 20px; }
 .grid { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-.grid h3 { margin-top: 0; }
 
-/* Header (no top panel of any kind) */
+/* Header (top panel removed) */
 .site-header {
   max-width: var(--maxw);
   margin: 0 auto;
@@ -43,28 +40,18 @@ p, li { font-size: 1rem; line-height: 1.6; color: var(--muted); }
   align-items: center;
   justify-content: space-between;
 }
-.brand {
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 700;
-  letter-spacing: 0.2px;
-}
-.site-nav a {
-  text-decoration: none;
-  color: var(--muted);
-  margin-left: 20px;
-  font-weight: 500;
-}
+.brand { text-decoration: none; color: var(--text); font-weight: 700; }
+.site-nav a { text-decoration: none; color: var(--muted); margin-left: 20px; font-weight: 500; }
 .site-nav a:hover { color: var(--text); }
 
-/* HERO (CSS background version – easiest) */
+/* Hero section */
 .hero {
   position: relative;
   height: var(--hero-height);
-  background-image: url("HERO_IMAGE.jpg"); /* <-- REPLACE with your path */
-  background-size: cover;          /* fills width */
+  background-image: url("HERO_IMAGE.jpg"); /* Replace with your image */
+  background-size: contain; /* shows more of the image (zoomed out) */
   background-repeat: no-repeat;
-  background-position: 50% var(--hero-y); /* lower value shows more top/sky */
+  background-position: 50% var(--hero-y);
   display: grid;
   place-items: end start;
   padding: 24px 20px;
@@ -77,11 +64,6 @@ p, li { font-size: 1rem; line-height: 1.6; color: var(--muted); }
   text-shadow: 0 2px 12px rgba(0,0,0,.45);
 }
 .hero p { color: rgba(255,255,255,.95); }
-
-/* If you insist on an <img> hero instead, comment out the background above and use:
-.hero { position: relative; height: var(--hero-height); display: grid; place-items: end start; padding: 24px 20px; }
-.hero > img { width: 100%; height: 100%; object-fit: cover; object-position: 50% var(--hero-y); position: absolute; inset: 0; z-index: -1; }
-*/
 
 /* Footer */
 .site-footer {
