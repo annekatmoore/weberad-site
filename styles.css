@@ -196,4 +196,31 @@ main { margin-top: 0 !important; }
 .brand img, .brand-logo, img[alt*="logo"] {
   height: 32px !important; width: auto !important;
 }
+/* === QUICK REPAIR OVERRIDES === */
+
+/* 1) Restore logo size (remove the 32px cap) */
+.brand img,
+.brand-logo,
+img[alt*="logo"] {
+  height: auto !important;
+  max-height: 56px !important;   /* adjust if you want bigger (e.g., 64px) */
+  width: auto !important;
+}
+
+/* 2A) If your hero is a BACKGROUND image on the container */
+#hero, .hero, .hero-banner, .masthead {
+  background-size: cover !important;         /* fills width; no side cutoffs */
+  background-position: 50% 30% !important;   /* move lower to show MORE sky */
+  min-height: 60vh !important;               /* adjust if too tall/short */
+}
+
+/* 2B) If your hero is an <img> inside the container (ignore if not) */
+#hero img, .hero img, .hero-banner img, .masthead img {
+  width: 100% !important;
+  height: auto !important;                   /* no cropping; keeps full width */
+  object-fit: contain !important;            /* shows whole image */
+  object-position: 50% 30% !important;       /* nudge down for more sky */
+  display: block !important;
+}
+
 
