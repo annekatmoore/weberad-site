@@ -77,8 +77,8 @@ h1,h2,h3{ font-family:var(--serif); }
    and push the image DOWN so text sits well above the buildings. */
 .hero{
   position:relative; text-align:center;
-  background: url('assets/hero-waterfront.png') center 132% / cover no-repeat;
-  /* ample vertical space like the mockup */
+  background: linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)),
+  url('assets/hero-waterfront.png') center 140% / contain no-repeat;
   padding: 170px 0 340px;  /* top / bottom */
 }
 @media (min-width:1200px){
