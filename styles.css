@@ -93,13 +93,13 @@ h1,h2,h3{ font-family:var(--serif); }
 .hero-content{ position:relative; z-index:1; }
 
 /* Headline proportions as in mockup */
-.hero-title{
-  margin:0 0 14px;
-  font-weight:700;
-  font-size: clamp(48px, 7.4vw, 96px);  /* big, elegant */
-  line-height:1.06;
-  letter-spacing:-.25px;
-  color:var(--ink);
+.hero-title {
+  margin: 0 0 14px;
+  font-weight: 700;
+  font-size: clamp(36px, 5.6vw, 72px);  /* proportionally smaller than 48–96px */
+  line-height: 1.06;
+  letter-spacing: -0.25px;
+  color: var(--ink);
 }
 
 /* Subline below headline */
@@ -177,7 +177,7 @@ main { margin-top: 0 !important; }
 #hero, .hero, .hero-banner, .masthead {
   background-repeat: no-repeat !important;
   background-size: contain !important;       /* zoom OUT to see more image */
-  background-position: 50% 65% !important;   /* move composition down → more sky */
+  background-position: 50% 70% !important;   /* move composition down → more sky */
   min-height: clamp(40vh, 60vh, 72vh) !important;
   /* If you need to force your file (ONLY if your CSS already uses background):
      background-image: url("hero-waterfront.png") !important; */
