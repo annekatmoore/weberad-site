@@ -72,3 +72,16 @@ p, li { font-size: 1rem; line-height: 1.6; color: var(--muted); }
   padding: 0 20px;
   color: var(--muted);
 }
+/* Slim font + sizes (no chunky look) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+html { font-size: 16px; }
+body { font-family: "Inter", -apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-weight: 400; }
+h1 { font-size: clamp(28px, 5vw, 42px); font-weight: 600; line-height: 1.15; }
+h2 { font-size: clamp(22px, 3.6vw, 30px); font-weight: 600; line-height: 1.2; }
+h3 { font-size: clamp(18px, 2.6vw, 22px); font-weight: 600; line-height: 1.25; }
+
+/* Remove any top panel/announcement bar without touching HTML */
+#top-panel, .top-panel, .announcement, .announcement-bar, .site-banner, .sticky-top, header.top, header[role="banner"] {
+  display: none !important; visibility: hidden !important; height: 0 !important; padding: 0 !important; margin: 0 !important;
+}
+body { padding-top: 0 !important; }
