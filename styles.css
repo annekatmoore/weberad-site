@@ -144,3 +144,50 @@ h1,h2,h3{ font-family:var(--serif); }
 .footer-logo{ height:36px; width:auto; display:block; }
 .legal{ margin:0; color:var(--ink-2); font-size:.95rem; }
 
+/* === HERO: single background behind text (desktop + mobile) === */
+
+/* 0) Remove any earlier pseudo-bg so we don't double-stack */
+.hero::before { content: none !important; background: none !important; }
+
+/* 1) Hide any <img>/<picture> placed inside the hero from older code */
+.hero img,
+.hero picture,
+.hero .hero-bg,
+.hero .masthead-img {
+  display: none !important;
+}
+
+/* 2) Make the hero full-bleed (no side borders), bg behind text */
+.hero {
+  position: relative;
+
+  /* full-bleed breakout even if parent has max-width/padding */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  max-width: none !important;
+
+  /* ensure height for the background */
+  min-height: 60vh;
+
+  /* SINGLE background with a light white overlay */
+  background:
+    linear-gradient(rgba(255,255,255,0.20), rgba(255,255,255,0.20)),
+    url('assets/hero-waterfront.png') center 85% / cover no-repeat;
+}
+
+/* Prevent any horizontal scroll from the full-bleed trick */
+html, body { overflow-x: hidden; }
+
+/* 3) Mobile tuning: same background, more sky, keep behind text */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+    padding-top: 120px;       /* keep your headline readable */
+    padding-bottom: 180px;    /* adjust if needed */
+    background-position: center 90% !important;  /* push image down → more sky */
+    background-size: cover !important;
+  }
+}
+
+
