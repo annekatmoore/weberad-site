@@ -96,7 +96,7 @@ h1,h2,h3{ font-family:var(--serif); }
 .hero-title {
   margin: 0 0 14px;
   font-weight: 700;
-  font-size: clamp(36px, 5.6vw, 72px);  /* proportionally smaller than 48–96px */
+  font-size: clamp(32px, 5vw, 56px);  /* proportionally smaller than 48–96px */
   line-height: 1.06;
   letter-spacing: -0.25px;
   color: var(--ink);
@@ -105,7 +105,7 @@ h1,h2,h3{ font-family:var(--serif); }
 /* Subline below headline */
 .hero-subtitle{
   margin:0 auto 30px; max-width:900px;
-  font-size: clamp(18px, 2.1vw, 24px);
+  font-size: clamp(16px, 2.8vw, 20px);
   line-height:1.5; color:var(--ink-2);
 }
 
@@ -228,6 +228,42 @@ html, body { overflow-x: hidden; }
   /* prevent horizontal scroll caused by full-bleed stripe */
   html, body { overflow-x: hidden; }
 }
+/* === HERO TITLE smaller + more breathing space === */
+.hero {
+  /* move the whole block further down */
+  padding: 220px 0 300px;   /* top / sides / bottom */
+}
+
+.hero-title {
+  font-size: clamp(32px, 5vw, 56px);  /* was 48→96px, now scaled down */
+  line-height: 1.15;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+/* === HERO SUBTITLE proportional smaller === */
+.hero-subtitle {
+  font-size: clamp(16px, 2.8vw, 22px);  /* was probably ~20–26px */
+  line-height: 1.4;
+  font-weight: 400;
+  margin: 0 auto 20px;
+  max-width: 700px;  /* keeps lines tidy on wide screens */
+  color: var(--ink);
+}
+
+/* === Mobile adjustments (optional, tweak if too big on phones) === */
+@media (max-width: 768px) {
+  .hero {
+    padding: 140px 20px 100px;   /* tighter top/bottom for small screens */
+  }
+  .hero-title {
+    font-size: clamp(24px, 6vw, 40px);
+  }
+  .hero-subtitle {
+    font-size: clamp(14px, 4vw, 18px);
+  }
+}
+
 
 
 
