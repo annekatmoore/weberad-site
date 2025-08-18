@@ -189,5 +189,33 @@ html, body { overflow-x: hidden; }
     background-size: cover !important;
   }
 }
+/* ===== Desktop: background behind text ===== */
+.hero {
+  position: relative;
+  padding: 170px 0 340px;
+  background:
+    linear-gradient(rgba(255,255,255,0.20), rgba(255,255,255,0.20)),
+    url('assets/hero-waterfront.png') center 85% / cover no-repeat;
+}
+
+.hero-mobile-img {
+  display: none; /* hidden by default (desktop/tablet) */
+}
+
+/* ===== Mobile: switch to stripe image under text ===== */
+@media (max-width: 768px) {
+  .hero {
+    background: none !important;   /* remove background on mobile */
+    padding: 100px 20px 20px;      /* tighten spacing */
+  }
+
+  .hero-mobile-img {
+    display: block !important;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;              /* gap below text */
+  }
+}
+
 
 
