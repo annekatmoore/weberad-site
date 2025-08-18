@@ -261,7 +261,28 @@ html, body { overflow-x: hidden; }
   .hero-subtitle {
     font-size: clamp(16px, 4vw, 20px);  /* nudged up for balance */
   }
+}/* === FORCE HERO DOWN ON MOBILE === */
+@media (max-width: 768px) {
+  /* push the whole hero block down */
+  section.hero,
+  .hero {
+    padding-top: 240px !important;   /* try 260–300px if you still need more */
+  }
+
+  /* neutralize inner offsets that can cancel padding */
+  .hero .container.hero-content,
+  .hero .hero-content,
+  .hero .container {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* if a fixed/sticky header overlaps, add clearance globally */
+  html {
+    scroll-padding-top: 80px;        /* doesn’t change layout, helps anchor jumps */
+  }
 }
+
 
 }
 
