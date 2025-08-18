@@ -251,17 +251,18 @@ html, body { overflow-x: hidden; }
   color: var(--ink);
 }
 
-/* === Mobile adjustments (optional, tweak if too big on phones) === */
 @media (max-width: 768px) {
   .hero {
-    padding: 140px 20px 100px;   /* tighter top/bottom for small screens */
+    padding: 200px 20px 100px;   /* ↑ was 140px, now 200px on top */
   }
   .hero-title {
-    font-size: clamp(24px, 6vw, 40px);
+    font-size: clamp(28px, 7vw, 46px);  /* bigger as requested */
   }
   .hero-subtitle {
-    font-size: clamp(14px, 4vw, 18px);
+    font-size: clamp(16px, 4vw, 20px);  /* nudged up for balance */
   }
+}
+
 }
 
 
