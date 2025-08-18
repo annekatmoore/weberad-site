@@ -215,13 +215,13 @@ html, body { overflow-x: hidden; }
     content: "";
     display: block;
     width: 100vw;                                 /* full-bleed stripe */
-    height: 38vh;                                 /* stripe height; adjust 30–45vh */
+    height: 30vh;                                 /* stripe height; adjust 30–45vh */
     margin-left: calc(50% - 50vw);                /* full-bleed breakout */
     margin-right: calc(50% - 50vw);
 
     background:
       linear-gradient(rgba(255,255,255,0.20), rgba(255,255,255,0.20)),
-      url('assets/hero-waterfront.png') center 90% / cover no-repeat;
+      url('assets/hero-waterfront.png') center 95% / cover no-repeat;
     /* ↑ 90% pushes the image DOWN → more sky. Try 85–95% to taste. */
   }
 
