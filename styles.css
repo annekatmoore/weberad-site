@@ -188,34 +188,47 @@ html, body { overflow-x: hidden; }
     background-position: center 90% !important;  /* push image down → more sky */
     background-size: cover !important;
   }
-}
-/* ===== Desktop: background behind text ===== */
+}/* === DESKTOP (unchanged): keep BG behind hero text === */
 .hero {
   position: relative;
-  padding: 170px 0 340px;
+  /* keep whatever padding you already use; example: */
+  /* padding: 170px 0 340px; */
   background:
     linear-gradient(rgba(255,255,255,0.20), rgba(255,255,255,0.20)),
     url('assets/hero-waterfront.png') center 85% / cover no-repeat;
 }
 
-.hero-mobile-img {
-  display: none; /* hidden by default (desktop/tablet) */
-}
+/* if any old pseudo-bg was used, kill it to avoid double layers */
+.hero::before { content: none !important; background: none !important; }
 
-/* ===== Mobile: switch to stripe image under text ===== */
+/* === MOBILE: remove BG behind text + add stripe image UNDER the text === */
 @media (max-width: 768px) {
   .hero {
-    background: none !important;   /* remove background on mobile */
-    padding: 100px 20px 20px;      /* tighten spacing */
+    /* tighter spacing for phones; tweak if you like */
+    padding: 100px 20px 20px !important;
+    background: none !important;                 /* remove BG behind text */
+    overflow: hidden;                             /* safety for full-bleed stripe */
   }
 
-  .hero-mobile-img {
-    display: block !important;
-    width: 100%;
-    height: auto;
-    margin-top: 20px;              /* gap below text */
+  /* create the horizontal stripe as a block AFTER the content */
+  .hero::after {
+    content: "";
+    display: block;
+    width: 100vw;                                 /* full-bleed stripe */
+    height: 38vh;                                 /* stripe height; adjust 30–45vh */
+    margin-left: calc(50% - 50vw);                /* full-bleed breakout */
+    margin-right: calc(50% - 50vw);
+
+    background:
+      linear-gradient(rgba(255,255,255,0.20), rgba(255,255,255,0.20)),
+      url('assets/hero-waterfront.png') center 90% / cover no-repeat;
+    /* ↑ 90% pushes the image DOWN → more sky. Try 85–95% to taste. */
   }
+
+  /* prevent horizontal scroll caused by full-bleed stripe */
+  html, body { overflow-x: hidden; }
 }
+
 
 
 
