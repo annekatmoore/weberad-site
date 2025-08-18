@@ -266,7 +266,7 @@ html, body { overflow-x: hidden; }
   /* push the whole hero block down */
   section.hero,
   .hero {
-    padding-top: 240px !important;   /* try 260–300px if you still need more */
+    padding-top: 220px !important;   /* try 260–300px if you still need more */
   }
 
   /* neutralize inner offsets that can cancel padding */
