@@ -282,6 +282,9 @@ html, body { overflow-x: hidden; }
     scroll-padding-top: 80px;        /* doesn’t change layout, helps anchor jumps */
   }
 }
+@media (max-width: 768px) {
+  body .hero { padding-top: 280px !important; } /* higher number = lower text */
+}
 
 
 }
